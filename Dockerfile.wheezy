@@ -4,7 +4,7 @@ FROM debian:wheezy
 ADD http://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz / 
 
 ENV DEBIAN_FRONTEND noninteractive 
-RUN echo 'deb http://deb.debian.org/debian wheezy-backports main' > /etc/apt/sources.list.d/backports.list
+RUN echo 'deb http://ftp.debian.org/debian wheezy-backports main' > /etc/apt/sources.list.d/backports.list
 RUN { \
 	echo 'Package: dh-python'; \
     echo 'Pin: release a=wheezy-backports'; \

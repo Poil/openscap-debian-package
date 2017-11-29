@@ -1,8 +1,9 @@
 # docker-compose.yml
 libopenscap8: 
     build: .
-    command: rake build publish PUBLISH_DIR=/pkg --trace
+    command: rake build publish PUBLISH_DIR=/data/pkg/xenial --trace
     volumes: 
         - .:/data
-        - pkg:/srv
     working_dir: /data
+    stdin_open: true
+    tty: true
